@@ -36,7 +36,8 @@ def PaymentBuilder(payment):
     if type[-1] == 's':
         type = type[:-1];
     if type in paymentTypes:
-        finalPayment = paymentTypes.get(type);
+        tempType = paymentTypes.get(type);
+        finalPayment['category'] = tempType['category'];
     finalPayment['price'] = paymentTypes[type]['price'] * count;
     return(finalPayment);
 
