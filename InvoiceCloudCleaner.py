@@ -1,4 +1,5 @@
 import csv
+import sys
 
 paymentAmounts = {
     'Vitals' : 10,
@@ -92,6 +93,6 @@ def PrintEntryList():
     return(finalForm);
 
 
-print(PrintEntryList())
+PrintEntryList()
 
 
