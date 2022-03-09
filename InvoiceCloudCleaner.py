@@ -15,6 +15,7 @@ paymentTypes = {
     'birth certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
     'death certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
     'marriage certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
+    'marriage intentions' : {'category' : 'Marriage Intentions', 'price' : paymentAmounts['Marriage Intentions']},
     'marriage intention' : {'category' : 'Marriage Intentions', 'price' : paymentAmounts['Marriage Intentions']},
     'business certificate' : {'category' : 'Business Certificate', 'price' : paymentAmounts['Business Certificate']},
     'burial permit' : {'category' : 'Burial Permit', 'price' : paymentAmounts['Burial Permit']},
@@ -29,12 +30,11 @@ def PaymentBuilder(payment):
     count = 1;
     type = '';
     if payment[0] == '(':
-        count = int(payment[1])
+        payment = payment[1:];
         temp = payment.partition(') ');
+        count = int(temp[0]);
     type = temp[2].lower();
     type = type.replace('?', '');
-    if type[-1] == 's':
-        type = type[:-1];
     if type in paymentTypes:
         tempType = paymentTypes.get(type);
         finalPayment['category'] = tempType['category'];
