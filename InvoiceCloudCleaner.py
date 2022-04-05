@@ -8,10 +8,12 @@ paymentAmounts = {
     'Burial Permit' : 10,
     'Dog Registration' : 10,
     'Dog RegistrationMF' : 15,
-    'Dog RegistrationSN' : 10
+    'Dog RegistrationSN' : 10,
+    'Dog Kennel License' : 150
     }
 paymentTypes = {
     'vitals' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
+    'vital' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
     'birth certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
     'death certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
     'marriage certificate' : {'category' : 'Vitals', 'price' : paymentAmounts['Vitals']},
@@ -21,7 +23,8 @@ paymentTypes = {
     'burial permit' : {'category' : 'Burial Permit', 'price' : paymentAmounts['Burial Permit']},
     'dog registration' : {'category' : 'Dog Registration', 'price' : paymentAmounts['Dog Registration']},
     'male/female' : {'category' : 'Dog Registration', 'price' : paymentAmounts['Dog RegistrationMF']},
-    'spayed/neutered' : {'category' : 'Dog Registration', 'price' : paymentAmounts['Dog RegistrationSN']}
+    'spayed/neutered' : {'category' : 'Dog Registration', 'price' : paymentAmounts['Dog RegistrationSN']},
+    'kennel license' : {'category' : 'Dog Kennel', 'price' : paymentAmounts['Dog Kennel License']}
 }
 
 def PaymentBuilder(payment):
