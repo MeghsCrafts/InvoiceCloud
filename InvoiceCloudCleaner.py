@@ -12,6 +12,7 @@ paymentAmounts = {
     'Dog Kennel License' : 150,
     'Late Fee (Dog)' : 15,
     'Fine (Dog)' : 50
+
     }
 paymentTypes = {
     # Vitals
@@ -40,6 +41,7 @@ paymentTypes = {
     'dog late fine' : {'category' : 'Fine (Dog)', 'price' : paymentAmounts['Fine (Dog)']},
     # Unknown Transaction
     'unknown transaction' : {'category' : 'Unknown Transaction', 'price' : 0}
+
 }
 
 # Entry Dictionary
